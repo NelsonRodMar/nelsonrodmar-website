@@ -7,7 +7,15 @@ $(document).ready(function() {
     // once: true  
   }); // initialize animate on scroll library
 });
-
+$(window).scroll(function() {
+  if(document.body.getBoundingClientRect().top != 0) {
+    jQuery("#navigation").fadeOut("slow", function() {
+      jQuery("#navigation").attr("style", "display: none !important");
+  });
+  } else {
+    jQuery("#navigation").fadeIn("slow");
+  }
+});
 // Smooth scroll for links with hashes
 $('a.smooth-scroll')
 .click(function(event) {
