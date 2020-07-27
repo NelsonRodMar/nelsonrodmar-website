@@ -8,7 +8,7 @@ $(document).ready(function() {
   }); // initialize animate on scroll library
 });
 $(window).scroll(function() {
-  if(document.body.getBoundingClientRect().top != 0) {
+  if(document.body.getBoundingClientRect().top != 0 && window.innerWidth >= 990) {
     jQuery("#navigation").fadeOut("slow", function() {
       jQuery("#navigation").attr("style", "display: none !important");
   });
